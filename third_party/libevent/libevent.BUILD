@@ -50,7 +50,7 @@ genrule(
         'export INSTALL_DIR=$$(pwd)/$(@D)',
         'export TMP_DIR=$$(mktemp -d -t libevent.XXXXX)',
         'mkdir -p $$TMP_DIR',
-        'cp -R $$(pwd)/external/org_libevent_libevent/* $$TMP_DIR',
+        "cp -R $$(pwd)/../../../../../external/com_github_libevent_libevent/* $$TMP_DIR",
         'cd $$TMP_DIR',
         './configure --prefix=$$INSTALL_DIR --enable-shared=no --disable-openssl',
         'make install',
